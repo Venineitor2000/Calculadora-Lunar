@@ -1,0 +1,79 @@
+body {
+    background: linear-gradient(#be7e33, #d39659);
+    background-image: url("galaxy.png");
+    background-repeat: repeat;
+    font-family: "Century Gothic";
+}
+
+.contenidoTitulo {
+    background: linear-gradient(45deg, #1c7463,#a74271);
+    border-radius: 15px;.
+    display: inline-block;
+    margin: 0px 20%;  
+    text-align: center;
+    padding: 0px 6px;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.textDiv {
+    border-radius: 15px;
+    background-color: #be7e33;
+    background: linear-gradient(#d39659,#be7e33);
+    padding: 0px 8px;
+    text-align: center;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.inlineText {
+    display: inline-block;
+}
+
+.centrador {
+    text-align: center;
+}
+      
+#escogerPlaneta {
+    display: inline-block;
+}
+
+#divPeso {
+    border-radius: 15px;
+    background-color: #be7e33;
+    background: linear-gradient(#d39659,#be7e33);
+    padding: 1px 20px 6px 20px;
+    text-align: center;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+      
+#toBeFilled {
+    font-size: 3vw;
+    text-align: center;
+    font-weight: 100;
+}
+
+#resultBox {
+    width: auto;
+    opacity: 0;
+    border-radius: 15px;
+    background-color: #be7e33;
+    background: linear-gradient(-45deg, #1c7463,#a74271);
+    padding: 1px 20px;
+    margin-top: 15px;
+    display: inline-block;
+    transition: opacity 2s, width 2s; 
+}
+
+@media screen and (min-width: 970px) {
+    #toBeFilled {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+    .contenidoTitulo {
+    font-size: 2vw;
+  }
+}

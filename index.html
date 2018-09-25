@@ -1,46 +1,40 @@
 <html>
 <head>
   <title> PesoGalactico </title>
-  <style>
-  body
-  {
-    background: linear-gradient(#63BCD7,#A3DBEC) ;
-    color: black;
-    font-family: Helvetica;
-  }
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="calculadora.css">
 
-  #titulo {
-    text-align: center;
-  }
-
-  .contenido {
-    background-color:#A3DBEC;
-    border-radius: 15px;.
-    padding: 0px 15px;
-
-  }
-  </style>
 </head>
 <body>
-  <div class="contenido"><h1 id="titulo">Bienvenido a <strong>PesoGalactico</strong></h1></div>
+    <div class="centrador"><div class="contenidoTitulo"><h1 id="titulo">Bienvenido a <strong>PesoGalactico</strong></h1></div></div>
 
-  <p>El peso de cada uno, es diferente segun el planeta donde estemos...</p>
+    <div class="centrador"><div class="textDiv"><p class="inlineText">El peso de cada uno es diferente según el planeta en donde estemos...</p></div></div>
+    
+    <div class="centrador"><div class="textDiv"><p class="inlineText">Te gustaría saber cuanto pesarías en cada parte del sistema solar?</p></div></div>
 
-  <p>Te gustaria saber cuanto pesarias en cada parte del sistema solar?</p>
+    <div class="centrador"><div class="textDiv"><p class="inlineText"><strong>Descubrilo ya, con nuestra web!</strong></p></div></div>
 
-  <p><strong>Descubrelo ya, con nuestra web!</strong></p>
-
-  <p>
-    <strong> Ingresa tu peso: </strong>
-    <input type="number" id = "Txt_Peso">
-  <p>
-
-<p>
-    <strong>Escoge un planeta:</strong>
-    <br> <input type="button"  value="Luna" id = "Luna_Boton">
-    <input type="button"  value="Marte" id = "Marte_Boton">
-    <input type="button"  value="Jupiter" id = "Jupiter_Boton">
-  </p>
+    <div class="centrador">
+        <div id="divPeso"> 
+            <p>
+                <strong> Ingresá tu peso: </strong>
+                <input type="number" id = "Txt_Peso">
+            </p>
+            <p id="escogerPlaneta">
+                <strong>Elegí un planeta:</strong>
+            </p>
+            <input type="button"  value="Luna" id = "Luna_Boton">
+            <input type="button"  value="Marte" id = "Marte_Boton">
+            <input type="button"  value="Jupiter" id = "Jupiter_Boton">
+     
+        </div>
+    </div>
+    
+    <div class="centrador">
+        <div id="resultBox">
+            <p id="toBeFilled"></p>
+        </div>
+    </div>
 
   <script src = "CalculadoraLunar2.js"> </script>
 </body>

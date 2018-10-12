@@ -128,10 +128,9 @@
     <title></title>
   </head>
   <body id = HTML>
-    <p id = Cumple_parrafo>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-      <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    </p>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
       <img src = 1_Cumple.png id = Cumple_1>
       <img src = 2_Cumple.png id = Cumple_2>
       <img src = 3_Cumple.png id = Cumple_3>
@@ -139,6 +138,9 @@
       <img src = 5_Cumple.png id = Cumple_5>
       <input type = button id = Cumple_Boton onclick=Cumple_Boton()>
       <audio src = C_Musica_Fondo.mp3 autoplay preload=auto id = Cumple_Musica></audio>
+      <p id = Cumple_parrafo>
+        <br>
+      </p>
 
      <script>
         var Cumple_Time = 0;
@@ -165,23 +167,24 @@
         function Cumple_Boton()
         {
           if(Cumple_Time >= 10)
-          {console.log("Hola1")
+          {
             css.innerHTML = css.innerHTML + "@keyframes A_Cumple_Body{0% {opacity: 100}15% {opacity: 100}35% {opacity: 0;}45% {opacity: 0;}100% {opacity: 100;}}";
             Cumple_Boton_On = true;
           }
         }
         setInterval(function ()
         {
+          Cumple_Musica.play()
           if(Cumple_Time >= 10 && Cumple_Boton_On == true)
           {
             Cumple_Time = 0;
           }
           if(Cumple_Time == 1.75 && Cumple_Boton_On == true)
-          {console.log("Hola2")
+          {
             HTML.innerHTML = "<p>"+Cumple_mensaje+"</p>";
             Cumple_Boton_On == false;
           }
-          Cumple_Time = Cumple_Time + 0.25;console.log(Cumple_Time)
+          Cumple_Time = Cumple_Time + 0.25;
         }, 250);
      </script>
   </body>

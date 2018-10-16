@@ -155,7 +155,7 @@ else
   +
   "#Dias{font-size:1000%; color: gold; text-align: center; text-shadow:-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;}"
   +
-  "#Horas{opacity: 10; color: blue; text-align: center; font-size: 500%; text-shadow:-1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;}"
+  "#Horas{opacity: 0; color: blue; text-align: center; font-size: 500%; text-shadow:-1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;}"
 }
 
 //Cambia la pagina a la de la fecha actual en version movil o compu segun el dispositivo

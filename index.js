@@ -5,8 +5,8 @@ var Contador_Horas = document.getElementById("Horas")
 
 var meses = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]; //Cantidad de dias que tiene cada mes del año
 
-var mes_deseado = [1, 10];
-var dia_deseado = [2, 20];
+var mes_deseado = [10];
+var dia_deseado = [20];
 
 var paginas = ["Cumple"]
 var fondo = ["#1A8F8B, #FF0080"]

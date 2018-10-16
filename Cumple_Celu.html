@@ -3,6 +3,10 @@
   <head>
     <meta charset=utf-8>
     <style id = css>
+      img
+      {
+        height: 30%
+      }
       p
       {
         color: gold;
@@ -28,8 +32,8 @@
       #Cumple_Boton
       {
         position: absolute;
-        top: 268px;
-        left: 525px;
+        top: 665px;
+        left: 325px;
         width: 279px;
         height: 179px;
         opacity: 0;
@@ -39,8 +43,8 @@
         animation-name: A_Cumple_1;
         animation-duration: 10s;
         position: absolute;
-        top: 100px;
-        left: 200px;
+        top: 500px;
+        left: 25px;
         opacity: 0;
       }
       #Cumple_2
@@ -48,8 +52,8 @@
         animation-name: A_Cumple_2;
         animation-duration: 10s;
         position: absolute;
-        top: 100px;
-        left: 200px;
+        top: 500px;
+        left: 25px;
         opacity: 0;
       }
       #Cumple_3
@@ -57,7 +61,7 @@
         animation-name: A_Cumple_3;
         animation-duration: 10s;
         position: relative;
-        top: 100px;
+        top: -650px;
         opacity: 0;
       }
       #Cumple_4
@@ -65,8 +69,8 @@
         animation-name: A_Cumple_4;
         animation-duration: 10s;
         position: absolute;
-        top: 100px;
-        left: 200px;
+        top: 500px;
+        left: 25px;
         opacity: 0;
       }
       #Cumple_5
@@ -74,8 +78,8 @@
         animation-name: A_Cumple_5;
         animation-duration: 10s;
         position: absolute;
-        top: 100px;
-        left: 200px;
+        top: 500px;
+        left: 25px;
       }
       #Cumple_5:active
       {
@@ -98,13 +102,13 @@
       }
       @keyframes A_Cumple_3
       {
-        0% {opacity: 0; transform: translateX(0px)}
+        0% {opacity: 0; transform: translateX(-175px)}
         30% {opacity: 0}
-        40%{opacity: 100; transform: translateX(0px)}
-        60%{transform: translateX(350px);}
+        40%{opacity: 100; transform: translateX(-175px)}
+        60%{transform: translateX(150px);}
         60%{ opacity: 100;}
         70%{ opacity: 0;}
-        100%{transform: translateX(350px);}
+        100%{transform: translateX(150px);}
       }
       @keyframes A_Cumple_4
       {
@@ -124,12 +128,19 @@
     <title></title>
   </head>
   <body id = HTML>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
       <img src = 1_Cumple.png id = Cumple_1>
       <img src = 2_Cumple.png id = Cumple_2>
       <img src = 3_Cumple.png id = Cumple_3>
       <img src = 4_Cumple.png id = Cumple_4>
       <img src = 5_Cumple.png id = Cumple_5>
       <input type = button id = Cumple_Boton onclick=Cumple_Boton()>
+      <audio src = C_Musica_Fondo.mp3 autoplay preload=auto id = Cumple_Musica>
+        <source src=C_Musica_Fondo.mp3>
+        <source src=C_Musica_Fondo.wav>
+      </audio>
       <p id = Cumple_parrafo>
         <br>
       </p>
@@ -159,23 +170,24 @@
         function Cumple_Boton()
         {
           if(Cumple_Time >= 10)
-          {console.log("Hola1")
+          {
             css.innerHTML = css.innerHTML + "@keyframes A_Cumple_Body{0% {opacity: 100}15% {opacity: 100}35% {opacity: 0;}45% {opacity: 0;}100% {opacity: 100;}}";
             Cumple_Boton_On = true;
           }
         }
         setInterval(function ()
         {
+          Cumple_Musica.play()
           if(Cumple_Time >= 10 && Cumple_Boton_On == true)
           {
             Cumple_Time = 0;
           }
           if(Cumple_Time == 1.75 && Cumple_Boton_On == true)
-          {console.log("Hola2")
-            HTML.innerHTML = "<p>"+Cumple_mensaje+"</p>";
-            Cumple_Boton_On == false;
+          {
+            HTML.innerHTML ="<p>"+Cumple_mensaje+"</p>" + "<audio src = C_Musica_Fondo.mp3 autoplay preload=auto id = Cumple_Musica> <source src=C_Musica_Fondo.mp3> <source src=C_Musica_Fondo.wav> </audio>";
+            Cumple_Boton_On = false;
           }
-          Cumple_Time = Cumple_Time + 0.25;console.log(Cumple_Time)
+          Cumple_Time = Cumple_Time + 0.25;
         }, 250);
      </script>
   </body>

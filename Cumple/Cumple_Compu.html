@@ -139,6 +139,7 @@
       </p>
 
      <script>
+        var Cumple_Musica_Momento;
         var Cumple_Time = 0;
         var Cumple_Boton_On = false;
         var Cumple_mensaje =
@@ -183,7 +184,9 @@
           }
           if(Cumple_Time == 1.75 && Cumple_Boton_On == true)
           {
+            Cumple_Musica_Momento = Cumple_Musica.currentTime; //Almacena el momento en el que esta la reproduccion de la cancion
             HTML.innerHTML = "<p>"+Cumple_mensaje+"</p>" + "<audio src = C_Musica_Fondo.mp3 autoplay preload=auto id = Cumple_Musica> <source src=C_Musica_Fondo.mp3> <source src=C_Musica_Fondo.wav> </audio>";
+            Cumple_Musica.currentTime = Cumple_Musica_Momento; //Hace que la cancion que se reinicio al re escribir el HTML arranque desde donde estaba
             Cumple_Boton_On = false;
           }
           Cumple_Time = Cumple_Time + 0.25;

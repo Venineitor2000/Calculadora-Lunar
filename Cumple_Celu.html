@@ -175,9 +175,15 @@
             Cumple_Boton_On = true;
           }
         }
+
+        function Reproducir()
+        {
+          Cumple_Musica.play();
+        }
+
         setInterval(function ()
         {
-          Cumple_Musica.play()
+          Cumple_Musica.addEventListener("canplay", Reproducir())
           if(Cumple_Time >= 10 && Cumple_Boton_On == true)
           {
             Cumple_Time = 0;
@@ -190,5 +196,6 @@
           Cumple_Time = Cumple_Time + 0.25;
         }, 250);
      </script>
+     <script src = Contador.js></script>
   </body>
 </html>

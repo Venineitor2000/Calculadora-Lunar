@@ -1,15 +1,7 @@
-var device = navigator.userAgent; //Esta variable es para despues comprobar si se esta en celu o no
-var css = document.getElementById("Estilo");
-var Contador_Dias = document.getElementById("Dias")
-var Contador_Horas = document.getElementById("Horas")
-
 var meses = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]; //Cantidad de dias que tiene cada mes del año
 
 var mes_deseado = [10, 10];
 var dia_deseado = [17, 31];
-
-var paginas = ["Cumple"]
-var fondo = ["cyan, purple", "#1A8F8B, #FF0080"]
 
 var fecha_proxima; //Representa la ubicacion de los array (dia_deseado, mes_deseado, mensajes) para saber cuales tomar para los calculos
 
@@ -136,44 +128,11 @@ else if(mes_deseado[fecha_proxima] - 1 < mes)
   }
 }
 
-//Muestra o oculta el contador de horas (Lo demas es para que se sigan mostrando bien los estilos de la pagina despues del cambio)
-if(dias_faltantes == 1)
+//Cambia la pagina a la pagina principal de nuevo una vez termino la fecha festiva
+if(dias_faltantes != 0)
 {
-  Estilo.innerHTML = "body{background: linear-gradient(" + fondo[fecha_proxima] + "); animation-name: Animacion;animation-duration: 5s;}"
-  +
-  "@keyframes Animacion{0% {opacity: 0;}100% {opacity: 1;}}"
-  +
-  "#Dias{font-size:1000%; color: gold; text-align: center; text-shadow:-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;}"
-  +
-  "#Horas{opacity: 1; color: blue; text-align: center; font-size: 500%; text-shadow:-1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;}"
+  location.href = "index.html";
 }
-else
-{
-  Estilo.innerHTML = "body{background: linear-gradient(" + fondo[fecha_proxima] + "); animation-name: Animacion;animation-duration: 5s;}"
-  +
-  "@keyframes Animacion{0% {opacity: 0;}100% {opacity: 1;}}"
-  +
-  "#Dias{font-size:1000%; color: gold; text-align: center; text-shadow:-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;}"
-  +
-  "#Horas{opacity: 0; color: blue; text-align: center; font-size: 500%; text-shadow:-1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;}"
-}
-
-//Cambia la pagina a la de la fecha actual en version movil o compu segun el dispositivo
-if(dias_faltantes == 0)
-{
-  if (device.match(/Iphone/i)|| device.match(/Ipod/i)|| device.match(/Android/i)|| device.match(/J2ME/i)|| device.match(/BlackBerry/i)|| device.match(/iPhone|iPad|iPod/i)|| device.match(/Opera Mini/i)|| device.match(/IEMobile/i)|| device.match(/Mobile/i)|| device.match(/Windows Phone/i)|| device.match(/windows mobile/i)|| device.match(/windows ce/i)|| device.match(/webOS/i)|| device.match(/palm/i)|| device.match(/bada/i)|| device.match(/series60/i)|| device.match(/nokia/i)|| device.match(/symbian/i)|| device.match(/HTC/i)|| device.match(/CriOS/i))
-   {
-     location.href = paginas[fecha_proxima] + "_Celu.html";
-   }
-   else
-   {
-     location.href = paginas[fecha_proxima] + "_Compu.html";
-   }
-}
-
-//Establece los contadores
-Contador_Dias.innerHTML = dias_faltantes;
-Contador_Horas.innerHTML = (24 - horas  - 1 ) + ":" + (60 - minutos) + ":" + (60 - segundos);
 }
 
 Tiempo();

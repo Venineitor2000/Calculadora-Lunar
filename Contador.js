@@ -1,7 +1,7 @@
 var meses = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]; //Cantidad de dias que tiene cada mes del año
 
 var mes_deseado = [10, 10];
-var dia_deseado = [17, 31];
+var dia_deseado = [20, 31];
 
 var fecha_proxima; //Representa la ubicacion de los array (dia_deseado, mes_deseado, mensajes) para saber cuales tomar para los calculos
 
@@ -131,8 +131,9 @@ else if(mes_deseado[fecha_proxima] - 1 < mes)
 //Cambia la pagina a la pagina principal de nuevo una vez termino la fecha festiva
 if(dias_faltantes != 0)
 {
-  location.href = "index.html";
+  location.href = "../index.html";
 }
+
 }
 
 Tiempo();

@@ -6,7 +6,7 @@ var Contador_Horas = document.getElementById("Horas")
 var meses = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]; //Cantidad de dias que tiene cada mes del año
 
 var mes_deseado = [10, 10];
-var dia_deseado = [17, 31];
+var dia_deseado = [20, 31];
 
 var paginas = ["Cumple"]
 var fondo = ["cyan, purple", "#1A8F8B, #FF0080"]
@@ -163,11 +163,11 @@ if(dias_faltantes == 0)
 {
   if (device.match(/Iphone/i)|| device.match(/Ipod/i)|| device.match(/Android/i)|| device.match(/J2ME/i)|| device.match(/BlackBerry/i)|| device.match(/iPhone|iPad|iPod/i)|| device.match(/Opera Mini/i)|| device.match(/IEMobile/i)|| device.match(/Mobile/i)|| device.match(/Windows Phone/i)|| device.match(/windows mobile/i)|| device.match(/windows ce/i)|| device.match(/webOS/i)|| device.match(/palm/i)|| device.match(/bada/i)|| device.match(/series60/i)|| device.match(/nokia/i)|| device.match(/symbian/i)|| device.match(/HTC/i)|| device.match(/CriOS/i))
    {
-     location.href = paginas[fecha_proxima] + "_Celu.html";
+     location.href = paginas[fecha_proxima] + "/" + paginas[fecha_proxima] + "_Celu.html";
    }
    else
    {
-     location.href = paginas[fecha_proxima] + "_Compu.html";
+     location.href = paginas[fecha_proxima] + "/" + paginas[fecha_proxima] + "_Compu.html";
    }
 }
 

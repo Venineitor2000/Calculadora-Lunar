@@ -127,13 +127,6 @@
       {
         if(Navidad_Video.currentTime == 20.6 && termino_1 == false)
         {
-          Navidad_Imagen_E.style.opacity = 1;
-          Navidad_Imagen_RCT1.style.opacity = 1;
-          Navidad_Imagen_RCT2.style.opacity = 1;
-          Navidad_Imagen_RCT3.style.opacity = 1;
-          Navidad_Imagen_RST1.style.opacity = 1;
-          Navidad_Imagen_RST2.style.opacity = 1;
-          Navidad_Imagen_RST3.style.opacity = 1;
           termino_1 = true;
 
           tiempo_mensaje = 0;
@@ -142,12 +135,19 @@
           var intervalo_1 = setInterval(function() //Contador de tiempo del mensaje
           {
             tiempo_mensaje++;
-            if(tiempo_mensaje == duracion_mensaje) //Cambio de imagen
+            if(tiempo_mensaje == duracion_mensaje * 2) //Cambio de imagen
             {
               Mensaje.src = "Mensaje_1_2.jpg"; //Segunda imagen
             }
-            else if(tiempo_mensaje == duracion_mensaje * 2) //Termina el mensaje
+            else if(tiempo_mensaje == duracion_mensaje * 3) //Termina el mensaje
             {
+              Navidad_Imagen_E.style.opacity = 1;
+              Navidad_Imagen_RCT1.style.opacity = 1;
+              Navidad_Imagen_RCT2.style.opacity = 1;
+              Navidad_Imagen_RCT3.style.opacity = 1;
+              Navidad_Imagen_RST1.style.opacity = 1;
+              Navidad_Imagen_RST2.style.opacity = 1;
+              Navidad_Imagen_RST3.style.opacity = 1;
               abrir = true;
               Mensaje.style.opacity = 0;
               clearInterval(intervalo_1);
@@ -288,11 +288,11 @@
             var intervalo_2_a = setInterval(function() //Contador de tiempo del mensaje
             {
               tiempo_mensaje++;
-              if(tiempo_mensaje == duracion_mensaje) //Cambio de imagen
+              if(tiempo_mensaje == duracion_mensaje * 2) //Cambio de imagen
               {
                 Mensaje.src = "Mensaje_2_2.jpg"; //Segunda imagen
               }
-              else if(tiempo_mensaje == duracion_mensaje * 2) //Terminar Mensaje
+              else if(tiempo_mensaje == duracion_mensaje * 3) //Terminar Mensaje
               {
                 abrir = true;
                 Mensaje.style.opacity = 0;
@@ -342,11 +342,11 @@
             var intervalo_2_b = setInterval(function() //Contador de tiempo del mensaje
             {
               tiempo_mensaje++;
-              if(tiempo_mensaje == duracion_mensaje) //Cambio de imagen
+              if(tiempo_mensaje == duracion_mensaje * 2) //Cambio de imagen
               {
                 Mensaje.src = "Mensaje_2_2.jpg"; //Segunda imagen
               }
-              else if(tiempo_mensaje == duracion_mensaje * 2)
+              else if(tiempo_mensaje == duracion_mensaje * 3)
               {
                 abrir = true;
                 Mensaje.style.opacity = 0;
@@ -402,15 +402,15 @@
             var intervalo_3_a = setInterval(function() //Contador de tiempo del mensaje
             {
               tiempo_mensaje++;
-              if(tiempo_mensaje == duracion_mensaje) //Cambio de imagen
+              if(tiempo_mensaje == duracion_mensaje * 2) //Cambio de imagen
               {
                 Mensaje.src = "Mensaje_3_2.jpg"; //Segunda imagen
               }
-              else if(tiempo_mensaje == duracion_mensaje * 2) //Cambio de imagen
+              else if(tiempo_mensaje == duracion_mensaje * 3) //Cambio de imagen
               {
                 Mensaje.src = "Mensaje_3_3.jpg"; //Tercera imagen
               }
-              else if(tiempo_mensaje == duracion_mensaje * 3)
+              else if(tiempo_mensaje == duracion_mensaje * 4)
               {
                 abrir = true;
                 Mensaje.style.opacity = 0;
@@ -460,15 +460,15 @@
             var intervalo_3_b = setInterval(function() //Contador de tiempo del mensaje
             {
               tiempo_mensaje++;
-              if(tiempo_mensaje == duracion_mensaje) //Cambio de imagen
+              if(tiempo_mensaje == duracion_mensaje * 2) //Cambio de imagen
               {
                 Mensaje.src = "Mensaje_3_2.jpg"; //Segunda imagen
               }
-              else if(tiempo_mensaje == duracion_mensaje * 2) //Cambio de imagen
+              else if(tiempo_mensaje == duracion_mensaje * 3) //Cambio de imagen
               {
                 Mensaje.src = "Mensaje_3_3.jpg"; //Tercera imagen
               }
-              else if(tiempo_mensaje == duracion_mensaje * 3)
+              else if(tiempo_mensaje == duracion_mensaje * 4)
               {
                 abrir = true;
                 Mensaje.style.opacity = 0;
@@ -524,15 +524,15 @@
             var intervalo_4_a = setInterval(function() //Contador de tiempo del mensaje
             {
               tiempo_mensaje++;
-              if(tiempo_mensaje == duracion_mensaje) //Cambio de imagen
+              if(tiempo_mensaje == duracion_mensaje * 2) //Cambio de imagen
               {
                 Mensaje.src = "Mensaje_4_2.jpg"; //Segunda imagen
               }
-              else if(tiempo_mensaje == duracion_mensaje * 2) //Cambio de imagen
+              else if(tiempo_mensaje == duracion_mensaje * 3) //Cambio de imagen
               {
                 Mensaje.src = "Mensaje_4_3.jpg"; //Tercera imagen
               }
-              else if(tiempo_mensaje == duracion_mensaje * 3)
+              else if(tiempo_mensaje == duracion_mensaje * 4)
               {
                 abrir = true;
                 Mensaje.style.opacity = 0;
@@ -582,15 +582,15 @@
             var intervalo_4_b = setInterval(function() //Contador de tiempo del mensaje
             {
               tiempo_mensaje++;
-              if(tiempo_mensaje == duracion_mensaje) //Cambio de imagen
+              if(tiempo_mensaje == duracion_mensaje * 2) //Cambio de imagen
               {
                 Mensaje.src = "Mensaje_4_2.jpg"; //Segunda imagen
               }
-              else if(tiempo_mensaje == duracion_mensaje * 2) //Cambio de imagen
+              else if(tiempo_mensaje == duracion_mensaje * 3) //Cambio de imagen
               {
                 Mensaje.src = "Mensaje_4_3.jpg"; //Tercera imagen
               }
-              else if(tiempo_mensaje == duracion_mensaje * 3)
+              else if(tiempo_mensaje == duracion_mensaje * 4)
               {
                 abrir = true;
                 Mensaje.style.opacity = 0;

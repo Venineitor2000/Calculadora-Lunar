@@ -141,6 +141,8 @@
             }
             else if(tiempo_mensaje == duracion_mensaje * 3) //Termina el mensaje
             {
+              abrir = true;
+              Mensaje.style.opacity = 0;
               Navidad_Imagen_E.style.opacity = 1;
               Navidad_Imagen_RCT1.style.opacity = 1;
               Navidad_Imagen_RCT2.style.opacity = 1;
@@ -148,8 +150,6 @@
               Navidad_Imagen_RST1.style.opacity = 1;
               Navidad_Imagen_RST2.style.opacity = 1;
               Navidad_Imagen_RST3.style.opacity = 1;
-              abrir = true;
-              Mensaje.style.opacity = 0;
               clearInterval(intervalo_1);
             }
           }, 1000);

@@ -130,20 +130,24 @@
           termino_1 = true;
 
           tiempo_mensaje = 0;
-          Mensaje.src = "Mensaje_1_1.jpg"; //Primer imagen
+          Mensaje.src = "Mensaje_1_3.jpg"; //Primer imagen
           Mensaje.style.opacity = 1;
           var intervalo_1 = setInterval(function() //Contador de tiempo del mensaje
           {
             tiempo_mensaje++;
             if(tiempo_mensaje == 1) //Cambio de imagen
             {
+              Mensaje.src = "Mensaje_1_2.jpg"; //Segunda imagen
+            }
+            else if(tiempo_mensaje == 2) //Cambio de imagen
+            {
               Mensaje.src = "Mensaje_1_1.jpg"; //Segunda imagen
             }
-            else if(tiempo_mensaje == 1 + duracion_mensaje * 2) //Cambio de imagen
+            else if(tiempo_mensaje == 2 + duracion_mensaje * 2) //Cambio de imagen
             {
               Mensaje.src = "Mensaje_1_2.jpg"; //Segunda imagen
             }
-            else if(tiempo_mensaje == 1 + duracion_mensaje * 3) //Termina el mensaje
+            else if(tiempo_mensaje == 2 + duracion_mensaje * 3) //Termina el mensaje
             {
               abrir = true;
               Mensaje.style.opacity = 0;

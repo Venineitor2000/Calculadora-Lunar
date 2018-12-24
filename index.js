@@ -2,11 +2,11 @@ var device = navigator.userAgent; //Esta variable es para despues comprobar si s
 var css = document.getElementById("Estilo");
 var Contador_Dias = document.getElementById("Dias")
 var Contador_Horas = document.getElementById("Horas")
-console.log("Hola");
+
 var meses = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]; //Cantidad de dias que tiene cada mes del año
 
 var mes_deseado = [10, 10, 12];
-var dia_deseado = [20, 31, 24];
+var dia_deseado = [20, 31, 25];
 
 var paginas = ["Cumple", "Hallowen", "Navidad"];
 var fondo = ["cyan, purple", "#1A8F8B, #FF0080", "#79FFFB, #A00000"];

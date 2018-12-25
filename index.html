@@ -40,7 +40,6 @@
     transform: translateX(-50%) translateY(-50%);
     z-index: -2;
   }
-
   img
   {
     position: fixed;
@@ -116,7 +115,6 @@
       var tiempo_mensaje = 0;
       var duracion_mensaje = 10;
       var pausa_mensaje_final = 3;
-
       function Navidad_Boton_Comenzo()
       {
         Navidad_Musica.play();
@@ -128,7 +126,6 @@
         if(Navidad_Video.currentTime == 20.6 && termino_1 == false)
         {
           termino_1 = true;
-
           tiempo_mensaje = 0;
           Mensaje.src = "Bug_1.png"; //Primer imagen
           Mensaje.style.opacity = 1;
@@ -162,12 +159,12 @@
               Navidad_Imagen_RST1.style.opacity = 1;
               Navidad_Imagen_RST2.style.opacity = 1;
               Navidad_Imagen_RST3.style.opacity = 1;
+              Mensaje.src = "Bug_2.png";
               clearInterval(intervalo_1);
             }
           }, 1000);
         }
       }, 1);
-
       function Abriendo_1()
       {
         if(abrir)
@@ -179,11 +176,8 @@
           Navidad_Imagen_RST1.style.opacity = 0;
           Navidad_Imagen_RST2.style.opacity = 0;
           Navidad_Imagen_RST3.style.opacity = 0;
-
           abrir = false;
-
           termino_2 = false;
-
           if(abierto_1 == false)
           {
             Navidad_Video.src = "Video 2 con tapa.mp4";
@@ -192,11 +186,9 @@
           {
             Navidad_Video.src = "Video 2 sin tapa.mp4";
           }
-
           Navidad_Video.play();
         }
       }
-
       function Abriendo_2()
       {
         if(abrir)
@@ -208,11 +200,8 @@
           Navidad_Imagen_RST1.style.opacity = 0;
           Navidad_Imagen_RST2.style.opacity = 0;
           Navidad_Imagen_RST3.style.opacity = 0;
-
           abrir = false;
-
           termino_3 = false;
-
           if(abierto_2 == false)
           {
             Navidad_Video.src = "Video 3 con tapa.mp4";
@@ -221,11 +210,9 @@
           {
             Navidad_Video.src = "Video 3 sin tapa.mp4";
           }
-
           Navidad_Video.play();
         }
       }
-
       function Abriendo_3()
       {
         if(abrir)
@@ -237,11 +224,8 @@
           Navidad_Imagen_RST1.style.opacity = 0;
           Navidad_Imagen_RST2.style.opacity = 0;
           Navidad_Imagen_RST3.style.opacity = 0;
-
           abrir = false;
-
           termino_4 = false;
-
           if(abierto_3 == false)
           {
             Navidad_Video.src = "Video 4 con tapa.mp4";
@@ -250,11 +234,9 @@
           {
             Navidad_Video.src = "Video 4 sin tapa.mp4";
           }
-
           Navidad_Video.play();
         }
       }
-
       setInterval(function() //Revisa si el video 2 ya termino
       {
         if(!abierto_1)
@@ -262,9 +244,7 @@
           if(Navidad_Video.currentTime == 29.2 && termino_2 == false)
           {
             abierto_1 = true;
-
             Navidad_Imagen_E.style.opacity = 1;
-
             if(!abierto_1)
             {
               Navidad_Imagen_RCT1.style.opacity = 1;
@@ -273,7 +253,6 @@
             {
               Navidad_Imagen_RST1.style.opacity = 1;
             }
-
             if(!abierto_2)
             {
               Navidad_Imagen_RCT2.style.opacity = 1;
@@ -282,7 +261,6 @@
             {
               Navidad_Imagen_RST2.style.opacity = 1;
             }
-
             if(!abierto_3)
             {
               Navidad_Imagen_RCT3.style.opacity = 1;
@@ -291,9 +269,7 @@
             {
               Navidad_Imagen_RST3.style.opacity = 1;
             }
-
             termino_2 = true;
-
             tiempo_mensaje = 0;
             Mensaje.src = "Mensaje_2_1.jpg"; //Primera Imagen
             Mensaje.style.opacity = 1;
@@ -308,6 +284,7 @@
               {
                 abrir = true;
                 Mensaje.style.opacity = 0;
+                Mensaje.src = "Bug_2.png";
                 clearInterval(intervalo_2_a);
               }
             }, 1000);
@@ -318,7 +295,6 @@
           if(Navidad_Video.currentTime == 28.2 && termino_2 == false)
           {
             Navidad_Imagen_E.style.opacity = 1;
-
             if(!abierto_1)
             {
               Navidad_Imagen_RCT1.style.opacity = 1;
@@ -327,7 +303,6 @@
             {
               Navidad_Imagen_RST1.style.opacity = 1;
             }
-
             if(!abierto_2)
             {
               Navidad_Imagen_RCT2.style.opacity = 1;
@@ -336,7 +311,6 @@
             {
               Navidad_Imagen_RST2.style.opacity = 1;
             }
-
             if(!abierto_3)
             {
               Navidad_Imagen_RCT3.style.opacity = 1;
@@ -345,9 +319,7 @@
             {
               Navidad_Imagen_RST3.style.opacity = 1;
             }
-
             termino_2 = true;
-
             tiempo_mensaje = 0;
             Mensaje.src = "Mensaje_2_1.jpg"; //Primer imagen
             Mensaje.style.opacity = 1;
@@ -362,13 +334,13 @@
               {
                 abrir = true;
                 Mensaje.style.opacity = 0;
+                Mensaje.src = "Bug_2.png";
                 clearInterval(intervalo_2_b);
               }
             }, 1000);
           }
         }
       }, 1);
-
       setInterval(function() //Revisa si el video 3 ya termino
       {
         if(!abierto_2)
@@ -376,9 +348,7 @@
           if(Navidad_Video.currentTime == 30.7 && termino_3 == false)
           {
             abierto_2 = true;
-
             Navidad_Imagen_E.style.opacity = 1;
-
             if(!abierto_1)
             {
               Navidad_Imagen_RCT1.style.opacity = 1;
@@ -387,7 +357,6 @@
             {
               Navidad_Imagen_RST1.style.opacity = 1;
             }
-
             if(!abierto_2)
             {
               Navidad_Imagen_RCT2.style.opacity = 1;
@@ -396,7 +365,6 @@
             {
               Navidad_Imagen_RST2.style.opacity = 1;
             }
-
             if(!abierto_3)
             {
               Navidad_Imagen_RCT3.style.opacity = 1;
@@ -405,9 +373,7 @@
             {
               Navidad_Imagen_RST3.style.opacity = 1;
             }
-
             termino_3 = true;
-
             tiempo_mensaje = 0;
             Mensaje.src = "Mensaje_3_1.jpg"; //Primera imagen
             Mensaje.style.opacity = 1;
@@ -426,6 +392,7 @@
               {
                 abrir = true;
                 Mensaje.style.opacity = 0;
+                Mensaje.src = "Bug_2.png";
                 clearInterval(intervalo_3_a);
               }
             }, 1000);
@@ -436,7 +403,6 @@
           if(Navidad_Video.currentTime == 29.7 && termino_3 == false)
           {
             Navidad_Imagen_E.style.opacity = 1;
-
             if(!abierto_1)
             {
               Navidad_Imagen_RCT1.style.opacity = 1;
@@ -445,7 +411,6 @@
             {
               Navidad_Imagen_RST1.style.opacity = 1;
             }
-
             if(!abierto_2)
             {
               Navidad_Imagen_RCT2.style.opacity = 1;
@@ -454,7 +419,6 @@
             {
               Navidad_Imagen_RST2.style.opacity = 1;
             }
-
             if(!abierto_3)
             {
               Navidad_Imagen_RCT3.style.opacity = 1;
@@ -463,9 +427,7 @@
             {
               Navidad_Imagen_RST3.style.opacity = 1;
             }
-
             termino_3 = true;
-
             tiempo_mensaje = 0;
             Mensaje.src = "Mensaje_3_1.jpg";//Primera imagen
             Mensaje.style.opacity = 1;
@@ -484,13 +446,13 @@
               {
                 abrir = true;
                 Mensaje.style.opacity = 0;
+                Mensaje.src = "Bug_2.png";
                 clearInterval(intervalo_3_b);
               }
             }, 1000);
           }
         }
       }, 1);
-
       setInterval(function() //Revisa si el video 4 ya termino
       {
         if(!abierto_3)
@@ -498,9 +460,7 @@
           if(Navidad_Video.currentTime == 25.2 && termino_4 == false)
           {
             abierto_3 = true;
-
             Navidad_Imagen_E.style.opacity = 1;
-
             if(!abierto_1)
             {
               Navidad_Imagen_RCT1.style.opacity = 1;
@@ -509,7 +469,6 @@
             {
               Navidad_Imagen_RST1.style.opacity = 1;
             }
-
             if(!abierto_2)
             {
               Navidad_Imagen_RCT2.style.opacity = 1;
@@ -518,7 +477,6 @@
             {
               Navidad_Imagen_RST2.style.opacity = 1;
             }
-
             if(!abierto_3)
             {
               Navidad_Imagen_RCT3.style.opacity = 1;
@@ -527,9 +485,7 @@
             {
               Navidad_Imagen_RST3.style.opacity = 1;
             }
-
             termino_4 = true;
-
             tiempo_mensaje = 0;
             Mensaje.src = "Mensaje_4_1.jpg"; //Primer imagen
             Mensaje.style.opacity = 1;
@@ -548,6 +504,7 @@
               {
                 abrir = true;
                 Mensaje.style.opacity = 0;
+                Mensaje.src = "Bug_2.png";
                 clearInterval(intervalo_4_a);
               }
             }, 1000);
@@ -558,7 +515,6 @@
           if(Navidad_Video.currentTime == 24.2 && termino_4 == false)
           {
             Navidad_Imagen_E.style.opacity = 1;
-
             if(!abierto_1)
             {
               Navidad_Imagen_RCT1.style.opacity = 1;
@@ -567,7 +523,6 @@
             {
               Navidad_Imagen_RST1.style.opacity = 1;
             }
-
             if(!abierto_2)
             {
               Navidad_Imagen_RCT2.style.opacity = 1;
@@ -576,7 +531,6 @@
             {
               Navidad_Imagen_RST2.style.opacity = 1;
             }
-
             if(!abierto_3)
             {
               Navidad_Imagen_RCT3.style.opacity = 1;
@@ -585,9 +539,7 @@
             {
               Navidad_Imagen_RST3.style.opacity = 1;
             }
-
             termino_4 = true;
-
             tiempo_mensaje = 0;
             Mensaje.src = "Mensaje_4_1.jpg";
             Mensaje.style.opacity = 1;
@@ -606,13 +558,13 @@
               {
                 abrir = true;
                 Mensaje.style.opacity = 0;
+                Mensaje.src = "Bug_2.png";
                 clearInterval(intervalo_4_b);
               }
             }, 1000);
           }
         }
       }, 1);
-
       var intervalo_5_a = setInterval(function()
       {
         if(abierto_1 && abierto_2 && abierto_3 && abrir) //Esto comprobaria que ya estan abiertos los 3 regalos y aparte que el ultimo que se abrio ya mostro sus mensajes y por eso abrir es verdadera de nuevo
@@ -624,7 +576,6 @@
           var intervalo_5_b = setInterval(function()
           {
             tiempo_mensaje++
-
             if(tiempo_mensaje == pausa_mensaje_final) //Termina la pausa del mensaje
             {
               Mensaje.style.opacity = 1; //Empieza a mostrar el mensaje
@@ -645,6 +596,7 @@
             {
               abrir = true;
               Mensaje.style.opacity = 0;
+              Mensaje.src = "Bug_2.png";
               clearInterval(intervalo_5_b);
             }
           },1000)
@@ -652,6 +604,6 @@
         }
       },1)
     </script>
-    
+
   </body>
 </html>

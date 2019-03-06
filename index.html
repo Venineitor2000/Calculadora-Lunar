@@ -11,15 +11,18 @@
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Power Pong Web.json", {onProgress: UnityProgress});
       var device = navigator.userAgent;
-if (device.match(/Iphone/i)|| device.match(/Ipod/i)|| device.match(/Android/i)|| device.match(/J2ME/i)|| device.match(/BlackBerry/i)|| device.match(/iPhone|iPad|iPod/i)|| device.match(/Opera Mini/i)|| device.match(/IEMobile/i)|| device.match(/Mobile/i)|| device.match(/Windows Phone/i)|| device.match(/windows mobile/i)|| device.match(/windows ce/i)|| device.match(/webOS/i)|| device.match(/palm/i)|| device.match(/bada/i)|| device.match(/series60/i)|| device.match(/nokia/i)|| device.match(/symbian/i)|| device.match(/HTC/i)|| device.match(/CriOS/i))
-       {
-         gameInstance.SendMessage("Opciones", "Establecer_Dispositivo", "true");
-       }
-       else
-       {
-         gameInstance.SendMessage("Opciones", "Establecer_Dispositivo", "false");
-       }
-
+      function Iniciar()
+      {
+        gameInstance.SetFullscreen(1)
+        if (device.match(/Iphone/i)|| device.match(/Ipod/i)|| device.match(/Android/i)|| device.match(/J2ME/i)|| device.match(/BlackBerry/i)|| device.match(/iPhone|iPad|iPod/i)|| device.match(/Opera Mini/i)|| device.match(/IEMobile/i)|| device.match(/Mobile/i)|| device.match(/Windows Phone/i)|| device.match(/windows mobile/i)|| device.match(/windows ce/i)|| device.match(/webOS/i)|| device.match(/palm/i)|| device.match(/bada/i)|| device.match(/series60/i)|| device.match(/nokia/i)|| device.match(/symbian/i)|| device.match(/HTC/i)|| device.match(/CriOS/i))
+               {
+                 gameInstance.SendMessage("Opciones", "Establecer_Dispositivo", "true");
+               }
+               else
+               {
+                 gameInstance.SendMessage("Opciones", "Establecer_Dispositivo", "false");
+               }
+      }
     </script>
   </head>
   <body>
@@ -27,7 +30,7 @@ if (device.match(/Iphone/i)|| device.match(/Ipod/i)|| device.match(/Android/i)||
       <div id="gameContainer" style="width: 960px; height: 600px"></div>
       <div class="footer">
         <div class="webgl-logo"></div>
-        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="fullscreen" onclick="Iniciar()"></div>
         <div class="title">Power-Pong</div>
       </div>
     </div>
